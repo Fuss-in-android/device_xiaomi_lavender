@@ -23,6 +23,9 @@
 
 include device/xiaomi/sdm660-common/BoardConfigCommon.mk
 
+# ANXCamera
+-include vendor/aeonax/ANXCamera/BoardConfigAnx.mk
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := lavender
 
