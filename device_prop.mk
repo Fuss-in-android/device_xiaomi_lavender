@@ -27,6 +27,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.qcom.ad.calib.data=/system/etc/calib.cfg \
 	ro.qcom.ad.sensortype=2
 
+# ART A11
+# dalvik.vm.boot-dex2oat-cpu-set: CPUs running dex2oat threads during boot time
+# Use both Silver and GOLD cluster for that
+# to build bootimage use only GOLD cluster
+# dalvik.vm.dex2oat-cpu-set CPUs running dex2oat threads after boot time
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
+    dalvik.vm.image-dex2oat-cpu-set=4,5,6,7 \
+    dalvik.vm.dex2oat-threads=4
+    
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.audio.fluence.voicecall=true \
