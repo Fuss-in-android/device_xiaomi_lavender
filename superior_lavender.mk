@@ -33,6 +33,9 @@ TARGET_BOOT_ANIMATION_RES := 1080
 # Inherit some common Carbon stuff.
 $(call inherit-product, vendor/superior/config/common.mk)
 
+# Launcher
+TARGET_LAUNCHER := oplauncher
+
 # Build Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
         TARGET_DEVICE="lavender" \
