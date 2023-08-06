@@ -30,7 +30,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 $(call inherit-product, device/xiaomi/lavender/device.mk)
 
 # Inherit some common Superior stuff.
-$(call inherit-product, vendor/superior/config/common.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Density
@@ -43,7 +43,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="lavender-user 10 QKQ1.190910.002 V11.0.1.0.QFGMIXM release-keys" 
 
 # Device identifier
-PRODUCT_NAME := superior_lavender
+PRODUCT_NAME := lineage_lavender
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_PLATFORM := SDM660
 PRODUCT_DEVICE := lavender
@@ -53,8 +53,3 @@ PRODUCT_MODEL := Redmi Note 7
 TARGET_VENDOR_PRODUCT_NAME := lavender
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-# Maintainer prop
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.superior.maintainer=Jimgsey
-SUPERIOR_OFFICIAL := true
